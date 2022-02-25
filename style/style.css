@@ -75,3 +75,7 @@ hr {
 .MathJax {
     font-size: 3em;
 }
+
+.svg_ellipses {
+    background-color: white;
+}
