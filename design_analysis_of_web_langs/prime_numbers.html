@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title></title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body onload="onLoad();">
+    <h4>vitalii_manoilo</h4>
+</body>
+<script>
+    function onLoad() {
+        let count = 1;
+        let isPrime = true;
+        let number = parseInt(window.location.search.slice(1));        
+        for (i = 3; i <= number; i++) {
+            isPrime = true;
+            for (j = 2; j <= parseInt(Math.ceil(Math.sqrt(i))); j++) {
+                if (i % j == 0) {
+                    isPrime = false
+                    break
+                }
+            }
+            if (isPrime) {
+                count++;
+            }
+        }
+        document.title = count;
+    }
+</script>
+</html>
